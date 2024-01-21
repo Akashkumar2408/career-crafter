@@ -13,6 +13,12 @@
         android:theme="@style/Theme.Careercraftier"
         tools:targetApi="31">
         <activity
+            android:name=".administrationsignuppage"
+            android:exported="false" />
+        <activity
+            android:name=".studentsignuppage"
+            android:exported="false" />
+        <activity
             android:name=".signupPage"
             android:exported="false" />
         <activity
