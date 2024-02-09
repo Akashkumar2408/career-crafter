@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+
 import android.widget.EditText;
 import android.widget.TextView;
 
@@ -37,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
                 if (enterusername.equals("admin") && enterpassword.equals("admin"))
                 {
                     Intent nextpage;
-                    nextpage=new Intent(MainActivity.this,mainpage.class);
+                    nextpage=new Intent(MainActivity.this,com.example.careercraftier.Main_page.class);
                     startActivity(nextpage);
                 }
                 else
