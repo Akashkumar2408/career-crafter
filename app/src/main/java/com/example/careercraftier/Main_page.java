@@ -1,5 +1,6 @@
 package com.example.careercraftier;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Menu;
@@ -29,13 +30,7 @@ public class Main_page extends AppCompatActivity {
         setContentView(binding.getRoot());
 
         setSupportActionBar(binding.appBarMainPage.toolbar);
-        binding.appBarMainPage.fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
+
         DrawerLayout drawer = binding.drawerLayout;
         NavigationView navigationView = binding.navView;
         // Passing each menu ID as a set of Ids because each
@@ -62,4 +57,18 @@ public class Main_page extends AppCompatActivity {
         return NavigationUI.navigateUp(navController, mAppBarConfiguration)
                 || super.onSupportNavigateUp();
     }
+
+    //colleges
+    public void clickcolleges()
+    {
+        Intent intent= new Intent(Main_page.this,collegeslist.class);
+        startActivity(intent);
+    }
+    //schools
+    public void clickschools()
+    {
+        Intent intent= new Intent(Main_page.this,schoolslist.class);
+        startActivity(intent);
+    }
+
 }

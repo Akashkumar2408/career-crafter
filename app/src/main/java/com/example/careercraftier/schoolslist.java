@@ -4,11 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class administrationsignuppage extends AppCompatActivity {
+public class schoolslist extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_administrationsignuppage);
+        setContentView(R.layout.activity_schoolslist);
     }
 }

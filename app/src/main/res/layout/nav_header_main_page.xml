@@ -4,7 +4,6 @@
     android:layout_width="match_parent"
     android:layout_height="200dp"
     android:background="@color/my_primary"
-    android:gravity="bottom"
     android:orientation="vertical"
     android:paddingLeft="16dp"
     android:paddingTop="16dp"
@@ -24,7 +23,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingTop="@dimen/nav_header_vertical_spacing"
-        android:text="@string/nav_header_title"
+        android:text="careercraftier"
+        android:textSize="20dp"
+        android:textStyle="bold"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
     <TextView
