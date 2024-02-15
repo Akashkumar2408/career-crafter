@@ -12,44 +12,44 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
-public class RecyclercollegeAdapter extends RecyclerView.Adapter<RecyclercollegeAdapter.collegeViewHolder> {
+public class RecyclercollegeAdapter extends RecyclerView.Adapter<RecyclercollegeAdapter.ViewHolder> {
 
     Context context;
-    ArrayList<post_layout_data> arrpost;
-    public RecyclercollegeAdapter(Context context, ArrayList<post_layout_data> arrpost) {
+    ArrayList<post_layout_data>arrposts;
+    public RecyclercollegeAdapter(Context context, ArrayList<post_layout_data> arrposts) {
         this.context=context;
-        this.arrpost=arrpost;
+        this.arrposts=arrposts;
     }
 
     @NonNull
     @Override
-    public collegeViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(context).inflate(R.layout.post_layout,parent,false);
-        collegeViewHolder collegeViewHolder=new collegeViewHolder(view);
-        return collegeViewHolder;
+        ViewHolder ViewHolder=new ViewHolder(view);
+        return ViewHolder;
     }
 
     @Override
-    public void onBindViewHolder(@NonNull collegeViewHolder holder, int position) {
-        holder.imgcollege.setImageResource(arrpost.get(position).collegeimg);
-        holder.txtcollegename.setText(arrpost.get(position).collegename);
-        holder.txtcollegestate.setText(arrpost.get(position).collegestate);
-        holder.txtcollegecity.setText(arrpost.get(position).collegecity);
-        holder.txtcollegeaddres.setText(arrpost.get(position).collegeaddress);
-        holder.Txtcollegecontact.setText(arrpost.get(position).collegecontact);
+    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+        holder.imgcollege.setImageResource(arrposts.get(position).collegeimg);
+        holder.txtcollegename.setText(arrposts.get(position).collegename);
+        holder.txtcollegestate.setText(arrposts.get(position).collegestate);
+        holder.txtcollegecity.setText(arrposts.get(position).collegecity);
+        holder.txtcollegeaddres.setText(arrposts.get(position).collegeaddress);
+        holder.Txtcollegecontact.setText(arrposts.get(position).collegecontact);
 
     }
 
     @Override
     public int getItemCount() {
-        return arrpost.size();
+        return arrposts.size();
     }
 
-    public class collegeViewHolder extends RecyclerView.ViewHolder {
+    public class ViewHolder extends RecyclerView.ViewHolder {
 
         TextView txtcollegename,txtcollegestate,txtcollegecity,txtcollegeaddres,Txtcollegecontact;
         ImageView imgcollege;
-        public collegeViewHolder(@NonNull View itemView) {
+        public ViewHolder(@NonNull View itemView) {
             super(itemView);
             txtcollegename=itemView.findViewById(R.id.collegename);
             txtcollegestate=itemView.findViewById(R.id.collegestate);

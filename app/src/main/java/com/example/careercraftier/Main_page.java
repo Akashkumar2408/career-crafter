@@ -59,13 +59,13 @@ public class Main_page extends AppCompatActivity {
     }
 
     //colleges
-    public void clickcolleges()
+    public void clickcolleges(View view)
     {
         Intent intent= new Intent(Main_page.this,collegeslist.class);
         startActivity(intent);
     }
     //schools
-    public void clickschools()
+    public void clickschools(View view)
     {
         Intent intent= new Intent(Main_page.this,schoolslist.class);
         startActivity(intent);
