@@ -9,11 +9,11 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-   public  EditText username ;
-   public EditText userpassword;
+   public  EditText username,userpassword ;
    public Button login ;
    public TextView incorrect;
 
@@ -24,26 +24,36 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        username=findViewById(R.id.username);
-        userpassword=findViewById(R.id.userpassword);
-        login=findViewById(R.id.loginapp);
-        incorrect=findViewById(R.id.incorrect);
+        username=(EditText) findViewById(R.id.username);
+        userpassword=(EditText) findViewById(R.id.userpassword);
+        login=(Button) findViewById(R.id.loginapp);
+        incorrect=(TextView) findViewById(R.id.incorrect);
+        DBhelper dBhelper=new DBhelper(this);
 
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-               String enterusername=username.getText().toString();
-               String enterpassword=userpassword.getText().toString();
-                if (enterusername.equals("admin") && enterpassword.equals("admin"))
+
+                String user=username.getText().toString();
+                String password=userpassword.getText().toString();
+
+                if (user.equals("")||password.equals(""))
                 {
-                    Intent nextpage;
-                    nextpage=new Intent(MainActivity.this,com.example.careercraftier.Main_page.class);
-                    startActivity(nextpage);
+                    Toast.makeText(MainActivity.this, "fill all fields", Toast.LENGTH_SHORT).show();
                 }
                 else
-               {
-                 incorrect.setText("incorrect id and password");
-               }
+                {
+                    boolean loginresult=dBhelper.checkuserpassword(user,password);
+                    if (loginresult == true)
+                    {
+                        Intent intent=new Intent(getApplicationContext(),Main_page.class);
+                        startActivity(intent);
+                    }
+                    else
+                    {
+                        Toast.makeText(MainActivity.this, "wrong id password", Toast.LENGTH_SHORT).show();
+                    }
+                }
             }
         });
     }

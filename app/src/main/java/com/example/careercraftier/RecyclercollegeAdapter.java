@@ -37,7 +37,6 @@ public class RecyclercollegeAdapter extends RecyclerView.Adapter<Recyclercollege
         holder.txtcollegecity.setText(arrposts.get(position).collegecity);
         holder.txtcollegeaddres.setText(arrposts.get(position).collegeaddress);
         holder.Txtcollegecontact.setText(arrposts.get(position).collegecontact);
-
     }
 
     @Override

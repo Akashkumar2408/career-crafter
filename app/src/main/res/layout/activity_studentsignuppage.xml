@@ -72,7 +72,7 @@
                     android:textColor="@color/black"/>
 
                 <EditText
-                    android:id="@+id/enterstudentusername"
+                    android:id="@+id/username"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="textEmailAddress" />
@@ -93,7 +93,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="textPassword"
-                    android:id="@+id/enterstudentuserpassword" />
+                    android:id="@+id/userpassword" />
                 <View
                     android:layout_width="wrap_content"
                     android:layout_height="25dp"/>
@@ -110,7 +110,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="textPassword"
-                    android:id="@+id/enterstudentuserrepassword" />
+                    android:id="@+id/userrepassword" />
                 <View
                     android:layout_width="wrap_content"
                     android:layout_height="25dp"/>
