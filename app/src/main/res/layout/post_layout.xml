@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <androidx.cardview.widget.CardView
@@ -9,7 +9,6 @@
         android:layout_height="wrap_content"
         android:layout_margin="15dp"
         app:cardCornerRadius="10dp">
-
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -72,16 +71,14 @@
             android:textSize="18sp"
             android:text="Contact number"/>
 
-        <RatingBar
-            android:id="@+id/college_rating"
+        <Button
+            android:id="@+id/applyforcollege"
             android:layout_width="wrap_content"
-            android:layout_height="40dp"
-            android:numStars="5"
-            android:scaleX=".6"
-            android:scaleY=".6"
-            android:layout_marginLeft="-50dp"
-            android:stepSize="1.0"
-            />
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:text="Apply for college"
+            android:textSize="15sp"
+            android:backgroundTint="@color/my_primary"/>
     </LinearLayout>
 
     </androidx.cardview.widget.CardView>

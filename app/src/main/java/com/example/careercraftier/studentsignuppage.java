@@ -47,7 +47,7 @@ public class studentsignuppage extends AppCompatActivity {
                             if (reresult== true)
                             {
                                 Toast.makeText(studentsignuppage.this, "Registration Successful", Toast.LENGTH_SHORT).show();
-                                Intent intent=new Intent(getApplicationContext(),Main_page.class);
+                                Intent intent=new Intent(getApplicationContext(),MainActivity.class);
                                 startActivity(intent);
 
                             }
