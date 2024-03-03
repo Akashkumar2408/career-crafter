@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
                     }
                     else
                     {
-                        Toast.makeText(MainActivity.this, "wrong id password", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(MainActivity.this, "wrong id password    ", Toast.LENGTH_SHORT).show();
                     }
                 }
             }

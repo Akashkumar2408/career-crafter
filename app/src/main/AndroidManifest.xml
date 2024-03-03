@@ -24,14 +24,9 @@
             android:label="@string/title_activity_main_page"
             android:theme="@style/Theme.Careercraftier.NoActionBar" />
         <activity
-            android:name=".administrationsignuppage"
-            android:exported="false" />
-        <activity
             android:name=".studentsignuppage"
             android:exported="false" />
-        <activity
-            android:name=".signupPage"
-            android:exported="false" />
+
         <activity
             android:name=".mainpage"
             android:exported="false" />
